@@ -20,12 +20,10 @@ repositories {
 
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-data-elasticsearch'
-    // 주의: 보통 'spring-boot-starter-web'을 사용하지만, 적어주신 그대로 'webmvc'로 변환했습니다.
     implementation 'org.springframework.boot:spring-boot-starter-webmvc'
-
-    // 테스트 의존성
-    testImplementation 'org.springframework.boot:spring-boot-starter-data-elasticsearch-test' // (실제 존재 여부 확인 필요)
-    testImplementation 'org.springframework.boot:spring-boot-starter-webmvc-test' // (실제 존재 여부 확인 필요)
+    testImplementation 'org.springframework.boot:spring-boot-starter-data-elasticsearch-test'
+    testImplementation 'org.springframework.boot:spring-boot-starter-webmvc-test'
+    runtimeOnly 'org.springframework.boot:spring-boot-docker-compose'
     testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 }
 
